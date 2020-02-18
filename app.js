@@ -1,7 +1,8 @@
-function preload() {}
+function preload() {
+  txt = loadStrings("compliments-list.txt");
+}
 
 function setup() {
-  document.getElementById("test").innerHTML = loadStrings(
-    "compliments-list.txt"
-  );
+  document.getElementById("compliment").innerHTML =
+    txt[floor(Math.random() * txt.length)];
 }
