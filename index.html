@@ -5,13 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Averia+Sans+Libre:700|Kalam:400,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="main.css" />
     <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
   </head>
   <body>
-    <div class="card" id="compliment-card">
-      <strong id="compliment"></strong>
+    <div class="main-container" id="main-container">
+      <button class="btn-compliment" id="btnCompliment">FÅ KOMPLIMENT!</button>
     </div>
+    <div class="intro" id="intro">
+      <div class="intro-text-container">
+        <strong class="intro-text">BACK 2 EARTH</strong>
+      </div>
+    </div>
+    <div class="card-container">
+      <div class="card" id="cardCompliment">
+        <strong id="pCompliment"></strong>
+      </div>
+    </div>
+
+    <div class="info" id="info"></div>
     <script src="app.js"></script>
   </body>
 </html>
