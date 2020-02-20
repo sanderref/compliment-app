@@ -1,0 +1,134 @@
+:root {
+  --main-box-shadow: 0px 0px 25px 3px rgba(33, 144, 235);
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-125%);
+  }
+}
+@keyframes cardSlideUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: "Averia Sans Libre", cursive;
+}
+
+button {
+  border: none;
+  background-color: white;
+  color: white;
+  font-family: "Averia Sans Libre", cursive;
+}
+button:focus {
+  outline-style: none;
+}
+
+.intro {
+  width: 100vw;
+  height: 125vh;
+  margin-top: -25vh;
+  display: flex;
+  position: absolute;
+  background-color: rgb(154, 255, 96);
+  z-index: 1;
+  animation: 2s cubic-bezier(0.96, -0.12, 1, 0.96) 0s 1 slideUp forwards;
+  animation-direction: normal;
+
+  box-shadow: var(--main-box-shadow);
+}
+.intro-text-container {
+  margin: 75vh auto 0vh auto;
+  size: auto;
+}
+.intro-text {
+  color: white;
+  font-size: 4em;
+  text-align: center;
+  margin: 50vh auto 0 auto;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgb(46, 179, 255);
+  z-index: 1;
+}
+
+.btn-compliment {
+  margin: 0 auto 0 auto;
+  margin-top: 25vh;
+  width: 25vw;
+  height: 10vh;
+  background-color: rgb(65, 185, 255);
+  font-size: 2em;
+
+  box-shadow: -0px -0px 5px 5px rgb(65, 185, 255),
+    -5px -5px 15px 3px rgb(109, 202, 255), 5px 5px 15px 3px rgb(19, 156, 235);
+  border-radius: 15px;
+  transition: 2s cubic-bezier(0, 0.97, 0.38, 0.99);
+  color: white;
+
+  cursor: pointer;
+}
+
+.btn-compliment:hover {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(65, 185, 255);
+  box-shadow: -0px -0px 5px 5px rgb(65, 185, 255),
+    -5px -5px 15px 3px rgb(19, 156, 235), 5px 5px 15px 3px rgb(109, 202, 255);
+  transition: 2s cubic-bezier(0, 0.97, 0.38, 0.99);
+}
+
+.card-container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  display: flex;
+  position: absolute;
+}
+
+.card {
+  text-overflow: ellipsis;
+
+  width: 30vw;
+  height: 100vh;
+  margin: 0 auto 0 auto;
+  border-radius: 5vh;
+  z-index: 2;
+  background-color: grey;
+  box-shadow: var(--main-box-shadow);
+
+  transition: 1s cubic-bezier(0.12, 1.28, 0.56, 0.95);
+  transform: translateY(100%);
+}
+
+#pCompliment {
+  padding: 20% 10% 0% 10%;
+  font-size: 2em;
+  color: white;
+}
+
+.info {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+}
