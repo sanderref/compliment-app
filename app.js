@@ -24,5 +24,5 @@ btnCompliment.onclick = function() {
   cardCompliment.style.backgroundColor =
     cardColors[floor(Math.random() * (txt.length - 1))];
   pCompliment.innerHTML = txt[floor(Math.random() * (txt.length - 1))];
-  cardCompliment.style.transform = "translate(0%,50%)";
+  cardCompliment.style.transform = "translate(0%, 5%)";
 };
